@@ -1,9 +1,13 @@
 /**
  * Created by ZL on 2016-10-17.
  */
-function conversion(s,numRows) {
-    var arr=[];
+var conversion = function(s, numRows) {
+        var arr=[];
+        var result=[];
     var gap=2*numRows-2;
+    if(s.length<3||numRows<2){
+        return s
+    }
     for(var i=0;i<numRows;i++){
         arr[i]=[];
     }
@@ -29,8 +33,17 @@ function conversion(s,numRows) {
             }
         }
     }
-    return arr.join()
-}
+   
+     for(var i=0;i<arr.length;i++){
+     for(var j=0;j<arr[i].length;j++){
+     
+     result.push(arr[i][j])
+         
+     }
+         
+     }
+     return result.join("")
+};
 
 
 
