@@ -22,7 +22,7 @@ var reverse = function(x) {
             return 0
         }
 
-    }else if(x==0||x>Math.pow(2,31) - 1){
+    }else if(x==0||x>=Math.pow(2,31) - 1){
         return 0
     }else{
         x=Math.abs(x)
