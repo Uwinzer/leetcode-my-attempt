@@ -27,3 +27,5 @@ var isPalindrome = function(x) {
   return Boolean(flag)
  
 };
+
+console.log(isPalindrome(-1123321));
