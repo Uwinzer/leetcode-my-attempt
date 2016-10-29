@@ -25,7 +25,7 @@ var removeNthFromEnd = function(head,n) {
 };
 
 /* LinkedList is a link of linkNode whose the definition is posted on my github data-structure, if you want to test this
-approach, pleas import LinkedList data-structure*/
+approach, please import LinkedList data-structure*/
 
 var link =new LinkedList();
 
