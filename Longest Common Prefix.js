@@ -1,48 +1,44 @@
 /**
- * Created by ZL on 2016-12-13.
+ * Created by ZL on 2016-12-(13-14).
  */
 /**
  * @param {string[]} strs
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
-
     var temp="";
     var result=[];
 
-if(strs.length==0){
+    if(strs.length===0){
 
-    return "";
+        return "";
 
-}else if(strs.length==1){
-    return strs;
-} else {
-    for (var col = 0; col < strs[0].length; col++) {
-        temp = "";
-        for (var pos = 0; pos < strs.length - 1; pos++) {
+    }else if(strs.length==1){
+        return strs[0];
+    } else {
+        for (var col = 0; col < strs[0].length; col++) {
+            temp = "";
+            for (var pos = 0; pos < strs.length - 1; pos++) {
 
-            if (strs[pos][col] != strs[pos + 1][col]) {
 
-                return result;
+                if (strs[pos][col] != strs[pos + 1][col]) {
+
+                    return result.join("");
+                }
+
+                temp = strs[pos][col];
+
             }
 
-            temp = strs[pos][col];
+            result.push(temp)
 
         }
-
-        result.push(temp)
-
+        return result.join("");
     }
-    return result;
-}
-
-
-
-
 
 };
 
 
 
-var testString=['abckkkk','abcdefg','abchello','ablize'];
+var testString=['ac','ab'];
 console.log(longestCommonPrefix(testString));
